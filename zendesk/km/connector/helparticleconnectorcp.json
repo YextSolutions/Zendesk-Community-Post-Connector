@@ -1,7 +1,7 @@
 {
-  "$id": "zendesk_helparticleconnectorcp",
+  "$id": "zendesk_communitypostconnector",
   "$schema": "https://schema.yext.com/config/km/connector/v2",
-  "displayName": "Zendesk Help Article Connector (CP)",
+  "displayName": "Zendesk Commuunity Post Connector",
   "entityType": "zendesk_communityPost",
   "source": {
     "sourceConfig": {
