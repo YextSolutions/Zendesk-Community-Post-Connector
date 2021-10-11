@@ -154,11 +154,11 @@
   ],
   "scheduleConfig": {
     "customSchedule": {
-      "timeZone": "Europe/Moscow",
-      "startDate": "2021-10-07",
-      "startTime": "01:00",
+      "timeZone": "America/New_York",
+      "startDate": "2021-09-14",
+      "startTime": "00:00",
       "frequencyType": "DAILY"
     },
-    "runMode": "DEFAULT"
+    "runMode": "COMPREHENSIVE"
   }
 }
