@@ -1,0 +1,164 @@
+{
+  "$id": "zendesk_helparticleconnectorcp",
+  "$schema": "https://schema.yext.com/config/km/connector/v2",
+  "displayName": "Zendesk Help Article Connector (CP)",
+  "entityType": "zendesk_communityPost",
+  "source": {
+    "sourceConfig": {
+      "apiPullConfig": {
+        "requestType": "GET",
+        "url": "https://abbyy.zendesk.com/api/v2/community/posts.json",
+        "paginationControl": {
+          "cursorPagination": {
+            "cursor": "next_page",
+            "cursorType": "FULL_URL",
+            "detectCursorInHeader": false
+          }
+        },
+        "headers": {},
+        "queryParams": {
+          "per_page": "100"
+        },
+        "dataFormat": "JSON"
+      }
+    },
+    "baseSelector": {
+      "type": "JSON",
+      "header": "articles",
+      "path": "posts"
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "ID",
+        "path": "id"
+      },
+      {
+        "type": "JSON",
+        "header": "URL",
+        "path": "html_url"
+      },
+      {
+        "type": "JSON",
+        "header": "Title",
+        "path": "title"
+      },
+      {
+        "type": "JSON",
+        "header": "Details",
+        "path": "details"
+      },
+      {
+        "type": "JSON",
+        "header": "Vote Sum",
+        "path": "vote_sum"
+      },
+      {
+        "type": "JSON",
+        "header": "Vote Count",
+        "path": "vote_count"
+      },
+      {
+        "type": "JSON",
+        "header": "Follower Count",
+        "path": "follower_count"
+      },
+      {
+        "type": "JSON",
+        "header": "Created At",
+        "path": "created_at"
+      },
+      {
+        "type": "JSON",
+        "header": "Updated At",
+        "path": "updated_at"
+      }
+    ]
+  },
+  "transforms": [
+    {
+      "extractText": {
+        "inputHeader": "Created At",
+        "newColumnHeader": "Created At - Formatted Date",
+        "extractOperation": "ALL_TEXT_BEFORE",
+        "extractFrom": "FIRST_INSTANCE_MATCHING_TEXT",
+        "valueToFind": {
+          "plainText": {
+            "value": "T",
+            "ignoreCase": false
+          }
+        }
+      }
+    },
+    {
+      "extractText": {
+        "inputHeader": "Updated At",
+        "newColumnHeader": "Updated At - Formatted",
+        "extractOperation": "ALL_TEXT_BEFORE",
+        "extractFrom": "FIRST_INSTANCE_MATCHING_TEXT",
+        "valueToFind": {
+          "plainText": {
+            "value": "T",
+            "ignoreCase": false
+          }
+        }
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "field": "externalArticleUpdateDate",
+      "header": "Updated At - Formatted",
+      "subfieldPath": []
+    },
+    {
+      "field": "richTextDescription",
+      "header": "Details",
+      "subfieldPath": []
+    },
+    {
+      "field": "name",
+      "header": "Title",
+      "subfieldPath": []
+    },
+    {
+      "field": "entityId",
+      "header": "ID",
+      "subfieldPath": []
+    },
+    {
+      "field": "zendesk_followerCount",
+      "header": "Follower Count",
+      "subfieldPath": []
+    },
+    {
+      "field": "externalArticlePostDate",
+      "header": "Created At - Formatted Date",
+      "subfieldPath": []
+    },
+    {
+      "field": "voteCount",
+      "header": "Vote Count",
+      "subfieldPath": []
+    },
+    {
+      "field": "landingPageUrl",
+      "header": "URL",
+      "subfieldPath": []
+    },
+    {
+      "field": "voteSum",
+      "header": "Vote Sum",
+      "subfieldPath": []
+    }
+  ],
+  "scheduleConfig": {
+    "customSchedule": {
+      "timeZone": "Europe/Moscow",
+      "startDate": "2021-10-07",
+      "startTime": "01:00",
+      "frequencyType": "DAILY"
+    },
+    "runMode": "DEFAULT"
+  }
+}
