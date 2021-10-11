@@ -7,7 +7,7 @@
     "sourceConfig": {
       "apiPullConfig": {
         "requestType": "GET",
-        "url": "https://abbyy.zendesk.com/api/v2/community/posts.json",
+        "url": "https://${{zendeskSubdomain}}.zendesk.com/api/v2/community/posts.json",
         "paginationControl": {
           "cursorPagination": {
             "cursor": "next_page",
