@@ -1,5 +1,5 @@
 {
-  "$id": "zendesk_communityPost",
+  "$id": "zendeskCommunityPost_communityPost",
   "$schema": "https://schema.yext.com/config/km/entity-type/v1",
   "description": "",
   "displayName": "Community Post",
@@ -34,7 +34,7 @@
       "required": true
     },
     {
-      "id": "zendesk_followerCount",
+      "id": "zendeskCommunityPost_followerCount",
       "required": false
     },
     {

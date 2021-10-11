@@ -1,8 +1,8 @@
 {
-  "$id": "zendesk_communitypostconnector",
+  "$id": "zendeskCommunityPost_connector",
   "$schema": "https://schema.yext.com/config/km/connector/v2",
   "displayName": "Zendesk Commuunity Post Connector",
-  "entityType": "zendesk_communityPost",
+  "entityType": "zendeskCommunityPost_communityPost",
   "source": {
     "sourceConfig": {
       "apiPullConfig": {
@@ -127,7 +127,7 @@
       "subfieldPath": []
     },
     {
-      "field": "zendesk_followerCount",
+      "field": "zendeskCommunityPost_followerCount",
       "header": "Follower Count",
       "subfieldPath": []
     },

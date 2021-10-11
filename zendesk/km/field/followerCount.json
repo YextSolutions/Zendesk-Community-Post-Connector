@@ -1,5 +1,5 @@
 {
-  "$id": "zendesk_followerCount",
+  "$id": "zendeskCommunityPost_followerCount",
   "$schema": "https://schema.yext.com/config/km/field/v1",
   "displayName": "Follower Count",
   "group": "NONE",

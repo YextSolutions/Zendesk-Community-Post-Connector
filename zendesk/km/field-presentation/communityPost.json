@@ -1,7 +1,7 @@
 {
-  "$id": "zendesk_communityPost",
+  "$id": "zendeskCommunityPost_communityPost",
   "$schema": "https://schema.yext.com/config/km/field-presentation/v1",
-  "entityType": "zendesk_communityPost",
+  "entityType": "zendeskCommunityPost_communityPost",
   "displayName": "Community Post",
   "presentationEntries": [
     {
@@ -30,7 +30,7 @@
           "id": "externalArticleUpdateDate"
         },
         {
-          "id": "zendesk_followerCount"
+          "id": "zendeskCommunityPost_followerCount"
         },
         {
           "id": "richTextDescription"
