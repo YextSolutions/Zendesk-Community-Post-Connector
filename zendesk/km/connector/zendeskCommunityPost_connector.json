@@ -5,28 +5,14 @@
   "entityType": "zendeskCommunityPost_communityPost",
   "source": {
     "sourceConfig": {
-      "apiPullConfig": {
-        "requestType": "GET",
-        "url": "https://${{zendeskSubdomain}}.zendesk.com/api/v2/community/posts.json",
-        "paginationControl": {
-          "cursorPagination": {
-            "cursor": "next_page",
-            "cursorType": "FULL_URL",
-            "detectCursorInHeader": false
-          }
-        },
-        "headers": {},
-        "queryParams": {
-          "per_page": "100"
-        },
-        "dataFormat": "JSON"
+      "nativeSourceConfig": {
+        "source": "zendesk",
+        "operation": "fetchCommunityPosts",
+        "inputs": {
+          "zendeskSubdomain": "${{zendeskSubdomain}}"
+        }
       }
-    },
-    "baseSelector": {
-      "type": "JSON",
-      "header": "articles",
-      "path": "posts"
-    },
+    }, 
     "selectors": [
       {
         "type": "JSON",
