@@ -1,15 +1,15 @@
 {
-  "$id": "zendeskCommunityPost_communityPost",
-  "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
-  "name": "Community Post-default",
-  "entityType": "zendeskCommunityPost_communityPost",
-  "fields": [
-    "externalArticlePostDate",
-    "externalArticleUpdateDate",
-    "landingPageUrl",
-    "richTextDescription",
-    "voteCount",
-    "voteSum",
-    "zendeskCommunityPost_followerCount"
-  ]
+    "$id": "zendeskCommunityPost_communityPost",
+    "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
+    "name": "Community Post-default",
+    "entityType": "zendeskCommunityPost_communityPost",
+    "fields": [
+        "externalArticlePostDate",
+        "externalArticleUpdateDate",
+        "landingPageUrl",
+        "richTextDescriptionV2",
+        "voteCount",
+        "voteSum",
+        "zendeskCommunityPost_followerCount"
+    ]
 }

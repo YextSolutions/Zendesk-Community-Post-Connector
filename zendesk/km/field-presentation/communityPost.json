@@ -1,63 +1,63 @@
 {
-  "$id": "zendeskCommunityPost_communityPost",
-  "$schema": "https://schema.yext.com/config/km/field-presentation/v1",
-  "entityType": "zendeskCommunityPost_communityPost",
-  "displayName": "Community Post",
-  "presentationEntries": [
-    {
-      "displayName": "Content",
-      "entryType": "DIVIDER"
-    },
-    {
-      "displayName": "Core Information",
-      "entryType": "SECTION",
-      "fields": [
+    "$id": "zendeskCommunityPost_communityPost",
+    "$schema": "https://schema.yext.com/config/km/field-presentation/v1",
+    "entityType": "zendeskCommunityPost_communityPost",
+    "displayName": "Community Post",
+    "presentationEntries": [
         {
-          "id": "name",
-          "visibleOnAdd": true
+            "displayName": "Content",
+            "entryType": "DIVIDER"
         },
         {
-          "id": "entityId",
-          "visibleOnAdd": true
+            "displayName": "Core Information",
+            "entryType": "SECTION",
+            "fields": [
+                {
+                    "id": "name",
+                    "visibleOnAdd": true
+                },
+                {
+                    "id": "entityId",
+                    "visibleOnAdd": true
+                },
+                {
+                    "id": "landingPageUrl"
+                },
+                {
+                    "id": "externalArticlePostDate"
+                },
+                {
+                    "id": "externalArticleUpdateDate"
+                },
+                {
+                    "id": "zendeskCommunityPost_followerCount"
+                },
+                {
+                    "id": "richTextDescriptionV2"
+                },
+                {
+                    "id": "voteCount"
+                },
+                {
+                    "id": "voteSum"
+                }
+            ]
         },
         {
-          "id": "landingPageUrl"
+            "displayName": "Other",
+            "entryType": "DIVIDER"
         },
         {
-          "id": "externalArticlePostDate"
-        },
-        {
-          "id": "externalArticleUpdateDate"
-        },
-        {
-          "id": "zendeskCommunityPost_followerCount"
-        },
-        {
-          "id": "richTextDescription"
-        },
-        {
-          "id": "voteCount"
-        },
-        {
-          "id": "voteSum"
+            "displayName": "Internal Use Only",
+            "entryType": "SECTION",
+            "fields": [
+                {
+                    "id": "folder"
+                },
+                {
+                    "id": "labels"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "displayName": "Other",
-      "entryType": "DIVIDER"
-    },
-    {
-      "displayName": "Internal Use Only",
-      "entryType": "SECTION",
-      "fields": [
-        {
-          "id": "folder"
-        },
-        {
-          "id": "labels"
-        }
-      ]
-    }
-  ]
+    ]
 }
